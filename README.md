@@ -1,7 +1,17 @@
 # Console File Manager
 
 ConsoleFileManager is a cross-platform program designed to simplify managing files and directories.
-Currently, the feature `editfile` is windows-specific, as it requires the use of notepad.exe. The plan is to replace the use of notepad with a custom-made text-editor, like nano for linux.
+
+## Notes
+- Currently, the feature `editfile` is windows-specific, as it requires the use of notepad.exe. Check the roadmap on what the plan is.
+- You have to open the file to use the commands. Plans are to make it installable (either via an msi on windows or add it as a package on linux) so that it is usable system-wide
+
+## Roadmap/To-Do
+- Make the Linux version into a package so that it can be used system-wide.
+- Make a MSI file so that you can install it on Windows
+- Make the Linux file smaller in size, curently it's about 63MB, while the Windows exe is only 151Kb.
+- delete directories.
+- create a nano-like text editor so that `editfile` is cross-platform.
 
 ## Features
 
@@ -27,16 +37,22 @@ The commands of ConsoleFileManager are simple, and designed to make it easy to u
 - `movefile [source] [destination]`: Move a file to another location.
 - `listcontent [directory]`: List files and subdirectories in a directory.
 
-## Getting Started
-
-1. Simply download the exe file on the releases page
-2. Run the file
-3. Go loose!
-
 ## Compatibility
 
 This Console File Manager is designed to be cross-compatible for all operating systems, made possible with C# .NET 7. Current tested operating systems:
 - Windows 10 22H2
+- EndaevourOS Cassini Nova 03 R3 with GNOME DE (Arch Linux)
+
+## Getting Started
+
+### Windows:
+1. Simply download the exe file on the releases page
+2. Run the file
+
+### Linux:
+1. Download the Linux-compatible file on the releases page
+2. Run the file via a command line by running `~/directory/`
+3. This should do the trick
 
 ## Contributions
 
