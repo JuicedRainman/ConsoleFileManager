@@ -1,4 +1,6 @@
-﻿    Dictionary<string, string> commands = new Dictionary<string, string>
+﻿using System.Diagnostics;
+
+Dictionary<string, string> commands = new Dictionary<string, string>
         {
             { "createfile", "Creates a file at the specified directory." },
             { "deletefile", "Deletes a file at the specified directory." },
@@ -136,11 +138,11 @@
                     {
                         string directoryToList = parts[1];
                         ListContent(directoryToList);
-                            }
-                            break;
-                        default:
-                            Console.WriteLine("Invalid command. Type helpfilecommander for commands.");
-                            break;
+                    }
+                    break;
+                    default:
+                    Console.WriteLine("Invalid command. Type helpfilecommander for commands.");
+                    break;
                     }
                 }
     }
@@ -242,7 +244,7 @@
                 Console.WriteLine($"Error {ex.Message} while trying to copy {filename1}");
             }
         }
-static void MoveFile(string filename1, string filename2)
+        static void MoveFile(string filename1, string filename2)
         {
             try
             {
@@ -258,25 +260,25 @@ static void MoveFile(string filename1, string filename2)
                 Console.WriteLine($"Error {ex.Message} while trying to move {filename1}");
             }
         }
-static void ListContent(string directory)
-{
-    try
-    {
-        string[] files = Directory.GetFiles(directory);
-        string[] subdirectories = Directory.GetDirectories(directory);
+        static void ListContent(string directory)
+        {
+            try
+            {
+                string[] files = Directory.GetFiles(directory);
+                string[] subdirectories = Directory.GetDirectories(directory);
 
-        Console.WriteLine("Files and Subdirectories:");
-        foreach (string subdir in subdirectories)
-        {
-            Console.WriteLine(subdir);
-        }
-        foreach (string file in files)
-        {
-            Console.WriteLine(file);
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error {ex.Message} while trying to list files and subdirectories");
-    }
+                Console.WriteLine("Files and Subdirectories:");
+                foreach (string subdir in subdirectories)
+                {
+                    Console.WriteLine(subdir);
+                }
+                foreach (string file in files)
+                {
+                    Console.WriteLine(file);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error {ex.Message} while trying to list files and subdirectories");
+            }
 }
