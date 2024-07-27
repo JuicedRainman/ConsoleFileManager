@@ -1,3 +1,5 @@
+# Deprecated, it's NOT a good piece of software. inefficient, clunky, hardcoded and just generally not very well made. Was a starters C# learning projects. Do with it what you will, if you want to clean up the mess, i accept pull requests.
+
 # Console File Manager
 
 ConsoleFileManager is a cross-platform program designed to simplify managing files and directories.
